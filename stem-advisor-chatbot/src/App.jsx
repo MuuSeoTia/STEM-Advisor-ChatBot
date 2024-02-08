@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div>
-        hello world
+        BHCC AI advisor app
       </div>
       <Chat/>
       <Button/>
