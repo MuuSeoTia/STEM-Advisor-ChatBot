@@ -1,7 +1,7 @@
 import React from "react"
-function Chat() {
+function Chat({handleChatInput}) {
   return (
-    <label>
+    <label onInput={handleChatInput}>
       Send to openai<input defaultValue="question for advisor"/>
     </label>
   )

@@ -1,9 +1,10 @@
 import React from "react";
 
-function Button(){
-  
+function Button({clickHandler}){
+
+
   return(
-    <button>Submit button</button>//dummy button does nothing
+    <button onClick={clickHandler}>Submit button</button>//dummy button does nothing
   )
 }
 export default Button
