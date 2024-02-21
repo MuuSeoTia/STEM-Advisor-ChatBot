@@ -1,6 +1,7 @@
 import express from "express"
+import { EOPNOTSUPP } from "node:constants";
 import readline from 'node:readline';
-
+import router from "./router";
 
 export function express_start() {
 
@@ -14,6 +15,7 @@ export function express_start() {
     rl.close()
   })
 
+  app.use(router)
 
   //put calls to llm api under /api/.... route
   app.post('/api', (req, res) => {
