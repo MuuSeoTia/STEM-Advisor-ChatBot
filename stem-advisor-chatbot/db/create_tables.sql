@@ -1,0 +1,7 @@
+CREATE TABLE "Conversations" ( 
+  id SERIAL PRIMARY KEY NOT NULL,
+  uuid VARCHAR(255)
+);
+CREATE TABLE "Messages" (
+  id SERIAL PRIMARY KEY NOT NULL
+);
