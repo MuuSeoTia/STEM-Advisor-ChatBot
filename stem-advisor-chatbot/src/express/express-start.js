@@ -18,10 +18,10 @@ export function express_start() {
   app.use(router)
 
   //put calls to llm api under /api/.... route
-  app.post('/api', (req, res) => {
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify("This is a response"))
-  })
+  // app.post('/api', (req, res) => {
+  //   res.setHeader('Content-Type', 'application/json')
+  //   res.end(JSON.stringify("This is a response"))
+  // })
 
 //TODO: persist questions in db, integrate w llm api, etc etc, db schema as well
 
