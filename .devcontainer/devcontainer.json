@@ -1,0 +1,14 @@
+{
+    "name": "(node + python) + postgres",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "remoteUser": "node",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vscode-icons-team.vscode-icons"
+        ]
+      }
+    }
+  }

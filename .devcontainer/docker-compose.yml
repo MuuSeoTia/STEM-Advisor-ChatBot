@@ -1,0 +1,23 @@
+version: '3'
+services:
+  # Development container
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment: [NODE_ENV=development]
+    depends_on: [db]
+    volumes: ["../..:/workspaces"]
+
+  # PostgreSQL Database
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: stemchatbot
+    ports: ["5432:5432"]
+    volumes: [stemchatbot-postgres-data:/var/lib/postgresql/data/pgdata]
+
+volumes:
+  stemchatbot-postgres-data:
