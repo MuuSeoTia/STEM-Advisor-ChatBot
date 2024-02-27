@@ -2,7 +2,12 @@
 AI advisor app made by BHCC STEM Club.
 
 ## Tools Used
-- Frontend: React w/ ViteJS
+- Frontend:
+  - [React](https://react.dev)
+  - [ViteJS](https://vitejs.dev)
+  - [shadcn/ui](https://ui.shadcn.com)
+  - [TailwindCSS](https://tailwindcss.com)
+
 - Backend: Python + SQLAlchemy
 
 ## How to run
