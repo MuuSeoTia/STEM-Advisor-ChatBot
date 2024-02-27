@@ -17,7 +17,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: stemchatbot
     ports: ["5432:5432"]
-    volumes: [stemchatbot-postgres-data:/var/lib/postgresql/data/pgdata]
+    volumes: [stemchatbot-postgres-data:/var/lib/postgresql/data]
 
 volumes:
   stemchatbot-postgres-data:
