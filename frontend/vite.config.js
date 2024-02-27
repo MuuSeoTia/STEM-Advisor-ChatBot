@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import {express_start} from './src/express/express-start.js'
 
-express_start()
 export default defineConfig({
   server: {
     watch: null,
