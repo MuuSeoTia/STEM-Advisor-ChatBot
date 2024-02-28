@@ -9,7 +9,9 @@
         "extensions": [
           "vscode-icons-team.vscode-icons",
           "bradlc.vscode-tailwindcss",
-          "EditorConfig.EditorConfig"
+          "EditorConfig.EditorConfig",
+          "ms-vsliveshare.vsliveshare",
+          "ms-python.python"
         ]
       }
     }

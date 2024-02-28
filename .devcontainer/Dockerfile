@@ -3,7 +3,7 @@ FROM node:lts
 # Install dependencies required for Git and Curl (Bash is already included)
 RUN apt-get update && \
     apt-get install -y \
-    git curl unzip nano python3 python3-pip python3-venv \
+    git curl unzip nano python3 python3-pip python3-venv python3-dev \
     --no-install-recommends && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*

@@ -9,15 +9,27 @@ services:
     depends_on: [db]
     volumes: ["../..:/workspaces"]
 
-  # PostgreSQL Database
+  # MariaDB Database
   db:
-    image: postgres:latest
+    image: mariadb:latest
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: stemchatbot
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: stemchatbot
+      MYSQL_USER: bhcc
+      MYSQL_PASSWORD: bhcc
     ports: ["5432:5432"]
-    volumes: [stemchatbot-postgres-data:/var/lib/postgresql/data]
+    volumes: [stemchatbot-mariadb-data:/var/lib/mysql]
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=bhcc
+      - PMA_PASSWORD=bhcc
 
 volumes:
-  stemchatbot-postgres-data:
+  stemchatbot-mariadb-data:
